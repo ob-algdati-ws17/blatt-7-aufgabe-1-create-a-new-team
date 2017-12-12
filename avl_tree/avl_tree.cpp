@@ -24,7 +24,16 @@ typename avl_tree::node(int key) {
 }
 
 typename const node avl_tree::search(typename avl_tree::node nude,int key) {
-	return null;
+	if (nude == nullptr) {
+		return null;
+	}
+
+	if (nude.key < key) {
+		return search(nude.left, key);
+	} else if (nude.key > key) {
+		return search(nude.right, key);
+	}
+	return nude;
 }
 
 const bool avl_tree::insert(typename avl_tree::node nude, int key) {
