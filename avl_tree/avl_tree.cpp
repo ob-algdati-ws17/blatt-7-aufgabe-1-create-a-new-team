@@ -8,15 +8,15 @@ avl_tree::~avl_tree() {
 }
 
 typename const node avl_tree::search(int key) {
-	return null;
+	return this.search(root, key);
 }
 
 const bool avl_tree::insert(int key) {
-	return true;
+	return this.insert(this.root, key);
 }
 
 const bool avl_tree::delete(int key) {
-	return true;
+	return this.delete(this.root, key);
 }
 
 typename avl_tree::node(int key) {
