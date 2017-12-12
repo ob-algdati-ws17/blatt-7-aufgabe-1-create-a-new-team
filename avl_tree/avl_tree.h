@@ -13,15 +13,17 @@ class avl_tree {
 			node(int);
 		};
 		node *root = nullptr;
-		const typename avl_tree::node search(typename avl_tree::node, int);
-		const bool insert (typename avl_tree::node, int);
-		const bool remove (typename avl_tree::node, int);
+		const typename avl_tree::node search(typename avl_tree::node &, int);
+		const bool insert(typename avl_tree::node &, int);
+		const bool remove(typename avl_tree::node &, int);
+		const int get_height(typename avl_tree::node &);
 	public:
 		avl_tree(int);
 		~avl_tree();
 		const typename avl_tree::node search(int);
 		const bool insert(int);
 		const bool remove(int);
+		const bool is_balanced();
 };
 
 #endif // AVLTREE_TREE_H

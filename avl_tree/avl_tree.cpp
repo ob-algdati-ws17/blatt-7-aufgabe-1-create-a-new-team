@@ -19,11 +19,17 @@ const bool avl_tree::delete(int key) {
 	return this.delete(this.root, key);
 }
 
+const bool avl_tree::is_balanced() {
+	if (root == nullptr) {
+		return true;
+	}
+}	
+
 typename avl_tree::node(int key) {
 	this.key = key;
 }
 
-typename const node avl_tree::search(typename avl_tree::node nude,int key) {
+typename const node avl_tree::search(typename avl_tree::node &nude,int key) {
 	if (nude == nullptr) {
 		return null;
 	}
@@ -36,10 +42,20 @@ typename const node avl_tree::search(typename avl_tree::node nude,int key) {
 	return nude;
 }
 
-const bool avl_tree::insert(typename avl_tree::node nude, int key) {
+const bool avl_tree::insert(typename avl_tree::node &nude, int key) {
 	return true;
 }
 
-const bool avl_tree::delete(typename avl_tree::node nude, int key) {
+const bool avl_tree::delete(typename avl_tree::node &nude, int key) {
 	return true;
+}
+
+const int get_height(typename avl_tree::node &nude) {
+	if (nude->left == nullptr && nude->right == nullptr) {
+		return 0;
+	}
+
+	int height_l = get_height(nude->left);
+	int height_r = get_height(nude->right);
+	return height_l > height_r ? height_l + 1 : height_r + 1;
 }
