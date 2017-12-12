@@ -13,6 +13,9 @@ class avl_tree {
 			node(int);
 		};
 		node *root = nullptr;
+		const typename avl_tree::node search(typename avl_tree::node, int);
+		const bool insert (typename avl_tree::node, int);
+		const bool remove (typename avl_tree::node, int);
 	public:
 		avl_tree(int);
 		~avl_tree();
