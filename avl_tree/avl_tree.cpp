@@ -23,6 +23,10 @@ const bool avl_tree::is_balanced() {
 	if (root == nullptr) {
 		return true;
 	}
+	if ((getHeight(root->left) - getHeight(root->right)) & -2) {
+		return false;
+	}
+	return true;
 }	
 
 typename avl_tree::node(int key) {
