@@ -31,6 +31,7 @@
 *.out
 *.app
 
+*.xml
 .idea/
 cmake-build-debug/
 build/
@@ -50,4 +51,4 @@ test/CMakeFiles/
 test/Makefile
 test/cmake_install.cmake
 test/test_avl_tree
-
+Testing/
