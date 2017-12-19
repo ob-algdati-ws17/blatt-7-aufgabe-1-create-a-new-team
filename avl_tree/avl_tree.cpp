@@ -23,11 +23,12 @@ const bool avl_tree::is_balanced() {
 	if (root == nullptr) {
 		return true;
 	}
-	if ((getHeight(root->left) - getHeight(root->right)) & -2) {
-		return false;
+	int balance = getHeight(root->left) - getHeight(root->right);
+	if (balance <= 1 && balance >= -1) {
+		return true;
 	}
-	return true;
-}	
+	return false;
+}
 
 typename avl_tree::node(int key) {
 	this.key = key;
