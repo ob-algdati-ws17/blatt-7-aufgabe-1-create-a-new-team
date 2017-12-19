@@ -23,18 +23,28 @@ const bool avl_tree::insert(int key) {
 }
 
 /* Deletes a node in the tree */
-const bool avl_tree::delete(int key) {
+const bool avl_tree::remove(int key) {
 	if (this.root == nullptr) {
 		return false;
 	}
 	if (this.root->key == key) {
-		typename avl_tree::node *remove = this.root;
-		typename avl_tree::node newNode = pop_left_child(remove->right);
-		newNode.right = remove->right;
-		newNode.left = remove->left;
-		this.root = &newNode;
-		delete remove;
-	} else if (!delete(this.root, key)) {
+		typename avl_tree::node *check = this.root;
+		if (check->right == nullptr && check->left == nullptr) {
+			this.root = nullptr;
+			return true;
+		} else if (check->right == nullptr) {
+			this.root = this.root->left;
+		} else if (check->left == nullptr) {
+			this.root = check->right;
+		} else {
+			this.root = pop_right_child(check->left);
+			this.root->right = check->right;
+			if (this.root->left != check->left) {
+				this.root->left = check->left;
+			}
+		}
+		delete check;
+	} else if (!remove(this.root, key)) {
 		return false;
 	}
 
@@ -112,40 +122,57 @@ const bool insert(typename avl_tree::node &nude, int key) {
 }
 
 /* Deletes a node recursively */
-const bool delete(typename avl_tree::node &nude, int key) {
+const bool remove(typename avl_tree::node &nude, int key) {
 	if (nude == nullptr) {
 		return false;
 	}
 
+	typename avl_tree::node *check;
+
 	if (nude->key < key) {
-		if (nude->right->key == key) {
-			typename avl_tree::node *remove = nude->right;
-			typename avl_tree::node newNode = pop_left_child(remove);
-			newNode.right = remove->right;
-			newNode.left = remove->left;
-			nude->right = &newNode;
-			delete remove;
-			return true;
+		check = nude->right;
+		if (check->key == key) {
+			if (check->left == nullptr && check->right == nullptr) {
+				nude->right = nullptr;
+			} else if (check->left == nullptr) {
+				nude->right = check->right;
+			} else if (check->right == nullptr) {
+				nude->right = check->left;
+			} else {
+				nude->right = pop_right_child(check->left);
+				nude->left->right = check->right;
+				if (nude->left != check->left) {
+					nude->left = check->left;
+				}
+			}
+			delete check;
 		} else {
-			return delete(nude->right);
+			return remove(check, key);
+		}
+	} else {
+		check = nude->left;
+		if (check->key == key) {
+			if (check->left == nullptr && check->right == nullptr) {
+				nude->left = nullptr;
+			} else if (check->left == nullptr) {
+				nude->left = check->right;
+			} else if (check->right == nullptr) {
+				nude->left = check->left;
+			} else {
+				nude->left = pop_right_child(check->left);
+				nude->left->right = check->right;
+				if (nude->left != check->left) {
+					nude->left = check->left;
+				}
+			}
+			delete check;
+		} else {
+			return remove(check, key);
 		}
 	}
 
-	if (nude->key > key) {
-		if (nude->left->key == key) {
-			typename avl_tree::node *remove = nude->left;
-			typename avl_tree::node newNode = pop_right_child(remove);
-			newNode.right = remove->right;
-			newNode.left = remove->left;
-			nude->left = &newNode;
-			delete remove;
-			return true;
-		} else {
-			return delete(nude->left);
-		}
-	}
+	return true;
 
-	return false;	
 }
 
 /* Gets the height of a node recursivly */
@@ -180,37 +207,51 @@ void balance(typename avl_tree:node &nude) {
 	}
 }
 
-/* Removes and returns the MLPD child of a node
- * When the node has no MLPD child, the method returns a nullpointer
- * */
-typename avl_tree::node pop_left_child(typename avl_tree::node &nude) {
-	if (nude->left == nullptr) {
-		return nullptr;
-	}
-
-	while (nude->left != nullptr) {
-		nude = nude->left;
-	}
-
-	typename avl_tree::node save = *(nude->left);
-	nude->left = nullptr;
-	return save;
-}
-
-
 /* Removes and returns the CSU child of a node
  * When the node has no CSU child, the method returns a nullpointer
  * */
-typename avl_tree::node pop_right_child(typename avl_tree:node &nude) {
+typename *avl_tree::node pop_right_child(typename avl_tree::node &nude) {
 	if (nude->right == nullptr) {
-		return nullptr;
+		return nude;
 	}
 
-	while (nude->right != nullptr) {
+	while (nude->right->right != nullptr) {
 		nude = nude->right;
 	}
 
-	typename avl_tree:node save = *(nude->right);
-	nude->right = nullptr;
+	typename avl_tree::node *save = nude->right;
+
+	if (save->left == nullptr) {
+		nude->right = save->left;
+		save->left = nullptr;
+	}
 	return save;
 }
+
+
+/* Does a CSU-CSU turn and returns the new top */
+typename *avL_tree::node right_right(typename avl_tree::node &nude) {
+	if (nude == nullptr) {
+		return nullptr;
+	}
+
+	typename avl_tree::node *r1, *r2, *r3, *r4;
+	r1 = nude->left;
+	r2 = nude;
+	r3 = nude->right->left;
+	r4 = nude->right;
+	r3 = nude->left;
+	r1 = nude;
+	r2 = r4;
+	r2->left = r1;
+	r1-right = r3;
+	return r2;
+}
+
+/* Does a MLPD-MLPD turn and returns the new top */
+typename *avl_tree::node left_left(typename avl_tree::node &nude) {
+	if (nude == nullptr) {
+		return nullptr;
+	}
+
+
