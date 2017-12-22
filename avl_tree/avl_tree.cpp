@@ -55,7 +55,7 @@ const bool avl_tree::is_balanced() {
 	if (root == nullptr) {
 		return true;
 	}
-	int balance = balanceFactor(root);
+	int balance = balance_factor(root);
 	if (balance <= 1 && balance >= -1) {
 		return true;
 	}
@@ -77,7 +77,7 @@ void avl_tree::balance() {
 	typename avl_tree::node *check = this->root;
 	int diff = 2;
 	while (diff > 1 && diff < -1) {
-		diff = balanceFactor(check);
+		diff = balance_factor(check);
 	}
 }
 
@@ -186,7 +186,7 @@ const int avl_tree::get_height(typename avl_tree::node *nude) {
 }
 
 /* Returns the factor by how much the tree is unbalanced */
-const int avl_tree::balanceFactor(typename avl_tree::node *nude) {
+const int avl_tree::balance_factor(typename avl_tree::node *nude) {
 	return get_height(nude->left) - get_height(nude->right);
 }
 

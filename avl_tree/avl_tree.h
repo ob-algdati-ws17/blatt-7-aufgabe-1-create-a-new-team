@@ -17,19 +17,17 @@ class avl_tree {
 		const bool insert(int);
 		const bool remove(int);
 		const bool is_balanced();
-		const node *search(node *, int);
-		const bool insert(node *, int);
-		const bool remove(node *, int);
-		const int get_height(node *);
-		node *right_right(node *);
-		node *left_left(node *);
-		node *pop_right_child(node *);
-		const int balanceFactor(node *);
 	private:
 		node *root = nullptr;
 		void balance();
-	
-		
+		static const node *search(node *, int);
+		static const bool insert(node *, int);
+		static const bool remove(node *, int);
+		static const int get_height(node *);
+		static node *right_right(node *);
+		static node *left_left(node *);
+		static node *pop_right_child(node *);
+		static const int balance_factor(node *);
 };
 
 
