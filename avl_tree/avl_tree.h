@@ -24,10 +24,11 @@ class avl_tree {
 		static const bool insert(node *, int);
 		static const bool remove(node *, int);
 		static const int get_height(node *);
-		static node *right_right(node *);
-		static node *left_left(node *);
+		static node *right_rotation(node *);
+		static node *left_rotation(node *);
 		static node *pop_right_child(node *);
 		static const int balance_factor(node *);
+		static void recursive_delete(node *);
 };
 
 

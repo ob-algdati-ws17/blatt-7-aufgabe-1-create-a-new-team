@@ -1,7 +1,18 @@
 #include "avl_tree.h"
 
 avl_tree::~avl_tree() {
+	recursive_delete(this->root);
+}
 
+/* Deletes the nodes of the tree recursivly */
+void avl_tree::recursive_delete(typename avl_tree::node *nude) {
+	if (nude == nullptr) {
+		return;
+	}
+
+	recursive_delete(nude->left);
+	recursive_delete(nude->right);
+	delete nude;
 }
 
 /* Searches a node in the tree */
@@ -56,7 +67,7 @@ const bool avl_tree::is_balanced() {
 		return true;
 	}
 	int balance = balance_factor(root);
-	if (balance <= 1 && balance >= -1) {
+	if (balance == 0) {
 		return true;
 	}
 	return false;
@@ -69,15 +80,68 @@ avl_tree::node::node(int key) {
 
 /* Balances the tree */
 void avl_tree::balance() {
-	if (this->root == nullptr || is_balanced()) {
+	if (this->root == nullptr) {
 		return;
 	}
 	
-	typename avl_tree::node *frow = nullptr, *srow = nullptr;
-	typename avl_tree::node *check = this->root;
-	int diff = 2;
-	while (diff > 1 && diff < -1) {
+	int diff = balance_factor(this->root);
+	if (diff == 0) {
+		return;
+	}
+	
+	typename avl_tree::node *frow = nullptr, *srow = this->root, *check;
+	bool srow_r = false, frow_r = false;
+	if (diff == -1) {
+		srow_r = true;
+	}
+
+	if (srow_r) {
+		check = srow->right;
+	} else {
+		check = srow->left;
+	}
+
+	while (diff != 0) {
 		diff = balance_factor(check);
+		if (diff == 0) {
+			/* Checking if asymmetrical unbalanced and if so 
+			 * rotate to make it symmetrical */
+			if (get_height(check->left) - get_height(check->right) > 0) {
+				if (srow_r) {
+					srow->right = right_rotation(check);
+				}
+			} else if (!srow_r) {
+				srow->left = left_rotation(check);
+			}
+
+			/* Doing the rotation */
+			if (srow_r) {
+				srow = left_rotation(srow);
+			} else {
+				srow = right_rotation(srow);
+			}
+
+			/* Connecting the new top node of the rotated tree to the
+			 * rest of the tree */
+			if (frow == nullptr) {
+				this->root = srow;
+			} else if (frow_r) {
+				frow->right = srow;
+			} else {
+				frow->left = srow;
+			}
+		} else {
+			/* Looking for the balanced node in the unbalanced tree */
+			frow = srow;
+			srow = check;
+			frow_r = srow_r;
+			srow_r = diff < 0;
+			if (srow_r) {
+				check = srow->right;
+			} else {
+				check = srow->left;
+			}
+		}
 	}
 }
 
@@ -185,9 +249,16 @@ const int avl_tree::get_height(typename avl_tree::node *nude) {
 	return height_l > height_r ? height_l + 1 : height_r + 1;
 }
 
-/* Returns the factor by how much the tree is unbalanced */
+/* Returns a three-state-bool representing, how the tree is unbalanced */
 const int avl_tree::balance_factor(typename avl_tree::node *nude) {
-	return get_height(nude->left) - get_height(nude->right);
+	int diff = get_height(nude->left) - get_height(nude->right);
+	if (diff < -1) {
+		return -1;
+	}
+	if (diff > 1) {
+		return 1;
+	}
+	return 0;
 }
 
 /* Removes and returns the CSU child of a node
@@ -212,8 +283,8 @@ typename avl_tree::node *avl_tree::pop_right_child(typename avl_tree::node *nude
 }
 
 
-/* Does a CSU-CSU turn and returns the new top */
-typename avl_tree::node *avl_tree::right_right(typename avl_tree::node *nude) {
+/* Does a MLPD turn and returns the new top */
+typename avl_tree::node *avl_tree::left_rotation(typename avl_tree::node *nude) {
 	if (nude == nullptr) {
 		return nullptr;
 	}
@@ -227,8 +298,8 @@ typename avl_tree::node *avl_tree::right_right(typename avl_tree::node *nude) {
 	return r2;
 }
 
-/* Does a MLPD-MLPD turn and returns the new top */
-typename avl_tree::node *avl_tree::left_left(typename avl_tree::node *nude) {
+/* Does a CSU turn and returns the new top */
+typename avl_tree::node *avl_tree::right_rotation(typename avl_tree::node *nude) {
 	if (nude == nullptr) {
 		return nullptr;
 	}
