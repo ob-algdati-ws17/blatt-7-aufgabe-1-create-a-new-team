@@ -184,10 +184,6 @@ const bool avl_tree::remove(typename avl_tree::node *nude, int key) {
 	return changed;
 }
 
-void avl_tree::balance() {
-	balance(this->root);
-}
-
 void avl_tree::balance(typename avl_tree::node *nude) {
 	if (nude == nullptr) {
 		return;
@@ -217,17 +213,6 @@ void avl_tree::balance(typename avl_tree::node *nude) {
 	update_height(nude);
 }
 
-/* Gets the height of a node recursivly */
-const int avl_tree::get_height(typename avl_tree::node *nude) {
-	if (nude == nullptr) {
-		return 0;
-	}
-
-	int height_l = get_height(nude->left);
-	int height_r = get_height(nude->right);
-	return height_l > height_r ? height_l + 1 : height_r + 1;
-}
-
 void avl_tree::update_height(typename avl_tree::node *nude) {
 	if (nude == nullptr) {
 		return;
@@ -247,17 +232,6 @@ const int avl_tree::balance_factor(typename avl_tree::node *nude) {
 	int left = nude->left != nullptr ? nude->left->height : 0;
 	int right = nude->right != nullptr ? nude->right->height : 0;
 	return left - right;
-}
-
-/* Converts an integer to a three-state-bool representing a nodes balance */
-const int avl_tree::balance_factor(const int in) {
-	if (in < -1) {
-		return -1;
-	}
-	if (in > 1) {
-		return 1;
-	}
-	return 0;
 }
 
 /* Removes and returns the CSU child of a node
