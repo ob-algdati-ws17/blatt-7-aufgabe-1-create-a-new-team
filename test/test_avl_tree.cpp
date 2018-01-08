@@ -22,6 +22,7 @@ TEST(AVLTreeTest, AVLTreeTest_InsertTest_2_Right) {
     EXPECT_EQ(nullptr, first->left);
 
     EXPECT_TRUE(d.remove(42));
+    EXPECT_FALSE(d.remove(42));
     EXPECT_EQ(nullptr, d.search(42));
 }
 
@@ -38,6 +39,7 @@ TEST(AVLTreeTest, AVLTreeTest_InsertTest_2_Left) {
     EXPECT_EQ(nullptr, root->right);
 
     EXPECT_TRUE(d.remove(42));
+    EXPECT_FALSE(d.remove(42));
     EXPECT_EQ(nullptr, d.search(42));
 }
 

@@ -42,13 +42,10 @@ const typename avl_tree::node *avl_tree::search(typename avl_tree::node *nude, i
 /* Inserts a node in a tree */
 const bool avl_tree::insert(int key) {
 	if (this->root == nullptr) {
-		this->root = new typename avl_tree::node(key);
-	}
-
-	else if (!insert(this->root, key)) {
+	    this->root = new typename avl_tree::node(key);
+	} else if (!insert(this->root, key)) {
 		return false;
 	}
-
 	this->balance();
 	return true;
 }
@@ -115,7 +112,7 @@ const bool avl_tree::remove(typename avl_tree::node *nude, int key) {
 
 	if (nude->key < key) {
 		check = nude->right;
-		if (check->key == key) {
+		if (check != nullptr && check->key == key) {
 			if (check->left == nullptr && check->right == nullptr) {
 				nude->right = nullptr;
 			} else if (check->left == nullptr) {
@@ -135,7 +132,7 @@ const bool avl_tree::remove(typename avl_tree::node *nude, int key) {
 		}
 	} else {
 		check = nude->left;
-		if (check->key == key) {
+		if (check != nullptr && check->key == key) {
 			if (check->left == nullptr && check->right == nullptr) {
 				nude->left = nullptr;
 			} else if (check->left == nullptr) {
