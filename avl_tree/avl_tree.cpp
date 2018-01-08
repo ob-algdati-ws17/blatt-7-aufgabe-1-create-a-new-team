@@ -43,32 +43,36 @@ const typename avl_tree::node *avl_tree::search(typename avl_tree::node *nude, i
 const bool avl_tree::insert(int key) {
 	if (this->root == nullptr) {
 	    this->root = new typename avl_tree::node(key);
-	} else if (!insert(this->root, key)) {
-		return false;
+		return true;
 	}
-	this->balance();
-	return true;
+	return insert(this->root, key);
 }
 
 /* Inserts a node recursivly */
 const bool avl_tree::insert(typename avl_tree::node *nude, int key) {
+	bool changed = false;
 	if (nude->key < key) {
 		if (nude->right == nullptr) {
 			nude->right = new typename avl_tree::node(key);
-			return true;
+			changed = true;
+		} else {
+			changed = insert(nude->right, key);
 		}
-		return insert(nude->right, key);
-	}
-
-	if (nude->key > key) {
+	} else if (nude->key > key) {
 		if (nude->left == nullptr) {
 			nude->left = new typename avl_tree::node(key);
-			return true;
+			changed = true;
+		} else {
+			changed = insert(nude->left, key);
 		}
-		return insert(nude->left, key);
 	}
 
-	return false;
+	if (changed) {
+		update_height(nude);
+		balance(nude);
+	}
+
+	return changed;
 }
 
 /* Deletes a node in the tree */
@@ -76,6 +80,9 @@ const bool avl_tree::remove(int key) {
 	if (this->root == nullptr) {
 		return false;
 	}
+
+	bool changed = false;
+
 	if (this->root->key == key) {
 		typename avl_tree::node *check = this->root;
 		if (check->right == nullptr && check->left == nullptr) {
@@ -87,19 +94,25 @@ const bool avl_tree::remove(int key) {
 			this->root = check->right;
 		} else {
 			this->root = pop_right_child(check->left);
-			this->root->right = check->right;
-			if (this->root != check->left) {
+			if (this->root != nullptr) {
 				this->root->left = check->left;
+			} else {
+				this->root = check->left;
 			}
+			this->root->right = check->right;
 		}
 		delete check;
-	} else if (!remove(this->root, key)) {
-		return false;
+		changed = true;
+	} else {
+		changed = remove(this->root, key);
 	}
 
-	this->balance();
+	if (changed) {
+		update_height(this->root);
+		balance(this->root);
+	}
 
-	return true;
+	return changed;
 }
 
 /* Deletes a node recursively */
@@ -109,6 +122,7 @@ const bool avl_tree::remove(typename avl_tree::node *nude, int key) {
 	}
 
 	typename avl_tree::node *check;
+	bool changed = false;
 
 	if (nude->key < key) {
 		check = nude->right;
@@ -122,13 +136,18 @@ const bool avl_tree::remove(typename avl_tree::node *nude, int key) {
 			} else {
 				nude->right = pop_right_child(check->left);
 				nude->right->right = check->right;
-				if (nude->right != check->left) {
+				if (nude->right != nullptr) {
 					nude->right->left = check->left;
+				} else {
+					nude->right = check->left;
 				}
 			}
 			delete check;
+			changed = true;
+			update_height(nude->right);
+			balance(nude->right);
 		} else {
-			return remove(check, key);
+			changed = remove(check, key);
 		}
 	} else {
 		check = nude->left;
@@ -141,19 +160,28 @@ const bool avl_tree::remove(typename avl_tree::node *nude, int key) {
 				nude->left = check->left;
 			} else {
 				nude->left = pop_right_child(check->left);
-				nude->left->right = check->right;
-				if (nude->left != check->left) {
+				if (nude->left != nullptr) {
 					nude->left->left = check->left;
+				} else {
+					nude->left = check->left;
 				}
+				nude->left->right = check->right;
 			}
 			delete check;
+			changed = true;
+			update_height(nude->left);
+			balance(nude->left);
 		} else {
-			return remove(check, key);
+			changed = remove(check, key);
 		}
 	}
 
-	return true;
+	if (changed) {
+		update_height(nude);
+		balance(nude);
+	}
 
+	return changed;
 }
 
 void avl_tree::balance() {
@@ -164,29 +192,29 @@ void avl_tree::balance(typename avl_tree::node *nude) {
 	if (nude == nullptr) {
 		return;
 	}
-	balance(nude->left);
-	balance(nude->right);
 
 	int balance = balance_factor(nude);
 	
-	if (balance == 1) {
+	if (balance >= 2) {
 		/* left heavy */
-		int diff = get_height(nude->left->left) - get_height(nude->left->right);
+		int diff = balance_factor(nude->left);
 		if (diff < 0) {
 			/* double rotation */
 			left_rotation(nude->left);
 		}
 		
 		right_rotation(nude);
-	} else if (balance == -1) {
+	} else if (balance <= -2) {
 		/* right heavy */
-		int diff = get_height(nude->right->left) - get_height(nude->right->right);
+		int diff = balance_factor(nude->right);
 		if (diff > 0) {
 			/* double rotation */
 			right_rotation(nude->right);
 		}
 		left_rotation(nude);
 	}
+
+	update_height(nude);
 }
 
 /* Gets the height of a node recursivly */
@@ -200,16 +228,33 @@ const int avl_tree::get_height(typename avl_tree::node *nude) {
 	return height_l > height_r ? height_l + 1 : height_r + 1;
 }
 
-/* Returns a three-state-bool representing, how the tree is unbalanced */
+void avl_tree::update_height(typename avl_tree::node *nude) {
+	if (nude == nullptr) {
+		return;
+	}
+
+	int left = (nude->left != nullptr ? nude->left->height : 0) + 1;
+	int right = (nude->right != nullptr ? nude->right->height : 0) + 1;
+	nude->height = left > right ? left : right;
+}
+
+/* Returns the balance factor of the node */
 const int avl_tree::balance_factor(typename avl_tree::node *nude) {
 	if (nude == nullptr) {
 		return 0;
 	}
-	int diff = get_height(nude->left) - get_height(nude->right);
-	if (diff < -1) {
+
+	int left = nude->left != nullptr ? nude->left->height : 0;
+	int right = nude->right != nullptr ? nude->right->height : 0;
+	return left - right;
+}
+
+/* Converts an integer to a three-state-bool representing a nodes balance */
+const int avl_tree::balance_factor(const int in) {
+	if (in < -1) {
 		return -1;
 	}
-	if (diff > 1) {
+	if (in > 1) {
 		return 1;
 	}
 	return 0;
@@ -220,10 +265,14 @@ const int avl_tree::balance_factor(typename avl_tree::node *nude) {
  * */
 typename avl_tree::node *avl_tree::pop_right_child(typename avl_tree::node *nude) {
 	if (nude->right == nullptr) {
-		return nude;
+		return nullptr;
 	}
 
 	while (nude->right->right != nullptr) {
+		int left = nude->left != nullptr ? nude->left->height : 0;
+		if (left < nude->right->height) {
+				nude->height -= 1;
+		}
 		nude = nude->right;
 	}
 
@@ -233,6 +282,7 @@ typename avl_tree::node *avl_tree::pop_right_child(typename avl_tree::node *nude
 		nude->right = save->left;
 		save->left = nullptr;
 	}
+	save->height = 1;
 	return save;
 }
 
@@ -253,6 +303,8 @@ void avl_tree::left_rotation(typename avl_tree::node *nude) {
 
 	r->right = nude->left;
 	nude->left = r;
+	update_height(r);
+	update_height(nude);
 }
 
 /* Does a CSU turn and nude now points to the new top */
@@ -271,4 +323,6 @@ void avl_tree::right_rotation(typename avl_tree::node *nude) {
 
 	r->left = nude->right;
 	nude->right = r;
+	update_height(r);
+	update_height(nude);
 }

@@ -9,6 +9,7 @@ class avl_tree {
 			node *left = nullptr;
 			node *right = nullptr;
 			int key;
+			int height = 1;
 
 			node(int);
 		};
@@ -27,8 +28,10 @@ class avl_tree {
 		static void left_rotation(node *);
 		static node *pop_right_child(node *);
 		static const int balance_factor(node *);
+		static const int balance_factor(const int);
 		static void recursive_delete(node *);
 		static void balance(node *);
+		static void update_height(node *);
 };
 
 
