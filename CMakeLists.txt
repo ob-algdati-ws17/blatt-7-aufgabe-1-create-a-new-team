@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 project(AVLTree)
 
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
 
 file(GLOB avl_tree
 	"avl_tree/*.h"
