@@ -45,7 +45,7 @@ const bool avl_tree::insert(int key) {
 		this->root = new typename avl_tree::node(key);
 	}
 
-	if (!insert(this->root, key)) {
+	else if (!insert(this->root, key)) {
 		return false;
 	}
 
