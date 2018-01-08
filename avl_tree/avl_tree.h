@@ -1,7 +1,10 @@
 #ifndef AVLTREE_TREE_H
 #define AVLTREE_TREE_H
 
-#include<iostream>
+#include <iostream>
+#include <vector>
+
+using namespace std;
 
 class avl_tree {
 	public:
@@ -12,11 +15,18 @@ class avl_tree {
 			int height = 1;
 
 			node(int);
+
+            vector<int> *preorder() const;  // (Hauptreihenfolge)
+            vector<int> *inorder() const;   // (Symmetrische Reihenfolge)
+            vector<int> *postorder() const; // (Nebenreihenfolge)
 		};
 		~avl_tree();
 		const node *search(int);
 		const bool insert(int);
 		const bool remove(int);
+        vector<int> *preorder() const;  // (Hauptreihenfolge)
+        vector<int> *inorder() const;   // (Symmetrische Reihenfolge)
+        vector<int> *postorder() const; // (Nebenreihenfolge)
 	private:
 		node *root = nullptr;
 		static const node *search(node *, int);
