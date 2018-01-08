@@ -1,6 +1,23 @@
 language: cpp
+
 compiler:
   - clang
   - gcc
+addons:
+  apt:
+    packages:
+      - doxygen
+      - doxygen-gui
+      - doxygen-doc
+      - doxygen-latex
+    sources:
+      - ubuntu-toolchain-r-test
+      
+before_install:
+  - pip install --user cpp-coveralls
+
 script:
   cmake CMakeLists.txt && make && make test
+  
+after_success:
+- coveralls --root .. -E ".*googletest-src.*" -E ".*gtest.*" -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*"
