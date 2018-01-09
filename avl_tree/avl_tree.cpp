@@ -135,12 +135,12 @@ const bool avl_tree::remove(typename avl_tree::node *nude, int key) {
 				nude->right = check->left;
 			} else {
 				nude->right = pop_right_child(check->left);
-				nude->right->right = check->right;
 				if (nude->right != nullptr) {
 					nude->right->left = check->left;
 				} else {
 					nude->right = check->left;
 				}
+                nude->right->right = check->right;
 			}
 			delete check;
 			changed = true;
