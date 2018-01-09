@@ -223,7 +223,7 @@ TEST(AVLTreeTest, AVLTreeTest_RemoveTest_1) {
     EXPECT_EQ(nullptr, d.preorder());
 }
 
-TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Root_2) {
+TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Root_Right) {
     avl_tree d;
     EXPECT_FALSE(d.remove(42));
     EXPECT_TRUE(d.insert(42));
@@ -240,6 +240,21 @@ TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Root_2) {
     EXPECT_THAT(*d.preorder(), testing::ElementsAre(1337));
     EXPECT_THAT(*d.inorder(), testing::ElementsAre(1337));
     EXPECT_THAT(*d.postorder(), testing::ElementsAre(1337));
+}
+
+TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Root_Left) {
+    avl_tree d;
+    EXPECT_FALSE(d.remove(1337));
+    EXPECT_TRUE(d.insert(1337));
+    EXPECT_FALSE(d.remove(42));
+    EXPECT_TRUE(d.insert(42));
+
+    EXPECT_TRUE(d.remove(1337));
+    EXPECT_FALSE(d.remove(1337));
+
+    EXPECT_THAT(*d.preorder(), testing::ElementsAre(42));
+    EXPECT_THAT(*d.inorder(), testing::ElementsAre(42));
+    EXPECT_THAT(*d.postorder(), testing::ElementsAre(42));
 }
 
 TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Root_3) {
