@@ -94,10 +94,8 @@ const bool avl_tree::remove(int key) {
 			this->root = check->right;
 		} else {
 			this->root = pop_right_child(check->left);
-			if (this->root != nullptr) {
+			if (this->root != check->left) {
 				this->root->left = check->left;
-			} else {
-				this->root = check->left;
 			}
 			this->root->right = check->right;
 		}
@@ -135,12 +133,10 @@ const bool avl_tree::remove(typename avl_tree::node *nude, int key) {
 				nude->right = check->left;
 			} else {
 				nude->right = pop_right_child(check->left);
-				if (nude->right != nullptr) {
+				if (nude->right != check->left) {
 					nude->right->left = check->left;
-				} else {
-					nude->right = check->left;
 				}
-                nude->right->right = check->right;
+                		nude->right->right = check->right;
 			}
 			delete check;
 			changed = true;
@@ -160,10 +156,8 @@ const bool avl_tree::remove(typename avl_tree::node *nude, int key) {
 				nude->left = check->left;
 			} else {
 				nude->left = pop_right_child(check->left);
-				if (nude->left != nullptr) {
+				if (nude->left != check->left) {
 					nude->left->left = check->left;
-				} else {
-					nude->left = check->left;
 				}
 				nude->left->right = check->right;
 			}
@@ -235,29 +229,24 @@ const int avl_tree::balance_factor(typename avl_tree::node *nude) {
 }
 
 /* Removes and returns the CSU child of a node
- * When the node has no CSU child, the method returns a nullpointer
+ * When the node has no CSU child, the method returns the node itself
  * */
 typename avl_tree::node *avl_tree::pop_right_child(typename avl_tree::node *nude) {
 	if (nude->right == nullptr) {
-		return nullptr;
+		return nude;
 	}
 
-	while (nude->right->right != nullptr) {
-		int left = nude->left != nullptr ? nude->left->height : 0;
-		if (left < nude->right->height) {
-				nude->height -= 1;
-		}
-		nude = nude->right;
+	auto tmp = pop_right_child(nude->right);
+
+	if (tmp == nude->right) {
+		nude->right = tmp->left;
+		tmp->left = nullptr;
+		update_height(tmp);
 	}
 
-	typename avl_tree::node *save = nude->right;
+	update_height(nude);
 
-	if (save->left != nullptr) {
-		nude->right = save->left;
-		save->left = nullptr;
-	}
-	save->height = 1;
-	return save;
+	return tmp;
 }
 
 
