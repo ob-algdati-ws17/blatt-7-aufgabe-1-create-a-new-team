@@ -13,6 +13,40 @@ TEST(AVLTreeTest, AVLTreeTest_SearchTest_NonExistingKey) {
     EXPECT_EQ(nullptr, d.search(42));
 }
 
+TEST(AVLTreeTest, AVLTreeTest_SearchTest_Left) {
+    avl_tree d;
+    EXPECT_EQ(nullptr, d.search(42));
+
+    EXPECT_TRUE(d.insert(69));
+    EXPECT_FALSE(d.insert(69));
+    EXPECT_TRUE(d.insert(42));
+    EXPECT_FALSE(d.insert(42));
+
+    auto root = d.search(69);
+    EXPECT_EQ(2, root->height);
+
+    auto node = d.search(42);
+    EXPECT_EQ(42, node->key);
+    EXPECT_EQ(1, node->height);
+}
+
+TEST(AVLTreeTest, AVLTreeTest_SearchTest_Right) {
+    avl_tree d;
+    EXPECT_EQ(nullptr, d.search(42));
+
+    EXPECT_TRUE(d.insert(69));
+    EXPECT_FALSE(d.insert(69));
+    EXPECT_TRUE(d.insert(1337));
+    EXPECT_FALSE(d.insert(1337));
+
+    auto root = d.search(69);
+    EXPECT_EQ(2, root->height);
+
+    auto node = d.search(1337);
+    EXPECT_EQ(1337, node->key);
+    EXPECT_EQ(1, node->height);
+}
+
 TEST(AVLTreeTest, AVLTreeTest_SearchTest_1) {
     avl_tree d;
     EXPECT_TRUE(d.insert(42));
