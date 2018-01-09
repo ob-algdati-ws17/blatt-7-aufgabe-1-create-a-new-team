@@ -359,12 +359,12 @@ TEST(AVLTreeTest, AVLTreeTest_InsertTest_3_Double_Rotation_Right) {
 
 TEST(AVLTreeTest, AVLTreeTest_InsertTest_3_Double_Rotation_Left) {
     avl_tree d;
-    EXPECT_TRUE(d.insert(69));
-    EXPECT_FALSE(d.insert(69));
-    EXPECT_TRUE(d.insert(42));
-    EXPECT_FALSE(d.insert(42));
     EXPECT_TRUE(d.insert(1337));
     EXPECT_FALSE(d.insert(1337));
+    EXPECT_TRUE(d.insert(42));
+    EXPECT_FALSE(d.insert(42));
+    EXPECT_TRUE(d.insert(69));
+    EXPECT_FALSE(d.insert(69));
 
     EXPECT_THAT(*d.preorder(), testing::ElementsAre(69, 42, 1337));
     EXPECT_THAT(*d.inorder(), testing::ElementsAre(42, 69, 1337));
