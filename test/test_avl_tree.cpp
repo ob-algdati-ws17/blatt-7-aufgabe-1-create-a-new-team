@@ -309,7 +309,7 @@ TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Inbetween_Right_More) {
     EXPECT_THAT(*d.postorder(), testing::ElementsAre(1, 69, 42, 665, 666, 9001, 667, 420));
 }
 
-TEST(AVLTreeTest, AVLTreeTest_InsertTest_3_Double_Rotation) {
+TEST(AVLTreeTest, AVLTreeTest_InsertTest_3_Double_Rotation_Right) {
     avl_tree d;
     EXPECT_TRUE(d.insert(42));
     EXPECT_FALSE(d.insert(42));
@@ -317,6 +317,20 @@ TEST(AVLTreeTest, AVLTreeTest_InsertTest_3_Double_Rotation) {
     EXPECT_FALSE(d.insert(1337));
     EXPECT_TRUE(d.insert(69));
     EXPECT_FALSE(d.insert(69));
+
+    EXPECT_THAT(*d.preorder(), testing::ElementsAre(69, 42, 1337));
+    EXPECT_THAT(*d.inorder(), testing::ElementsAre(42, 69, 1337));
+    EXPECT_THAT(*d.postorder(), testing::ElementsAre(42, 1337, 69));
+}
+
+TEST(AVLTreeTest, AVLTreeTest_InsertTest_3_Double_Rotation_Left) {
+    avl_tree d;
+    EXPECT_TRUE(d.insert(69));
+    EXPECT_FALSE(d.insert(69));
+    EXPECT_TRUE(d.insert(42));
+    EXPECT_FALSE(d.insert(42));
+    EXPECT_TRUE(d.insert(1337));
+    EXPECT_FALSE(d.insert(1337));
 
     EXPECT_THAT(*d.preorder(), testing::ElementsAre(69, 42, 1337));
     EXPECT_THAT(*d.inorder(), testing::ElementsAre(42, 69, 1337));
