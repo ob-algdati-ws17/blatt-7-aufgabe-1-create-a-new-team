@@ -257,25 +257,27 @@ TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Root_Left) {
     EXPECT_THAT(*d.postorder(), testing::ElementsAre(42));
 }
 
-TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Root_3) {
+TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Root_Rang2) {
     avl_tree d;
-    EXPECT_FALSE(d.remove(42));
-    EXPECT_TRUE(d.insert(42));
     EXPECT_FALSE(d.remove(69));
     EXPECT_TRUE(d.insert(69));
-    EXPECT_FALSE(d.remove(1337));
-    EXPECT_TRUE(d.insert(1337));
+    EXPECT_FALSE(d.remove(1));
+    EXPECT_TRUE(d.insert(1));
+    EXPECT_FALSE(d.remove(420));
+    EXPECT_TRUE(d.insert(420));
+    EXPECT_FALSE(d.remove(42));
+    EXPECT_TRUE(d.insert(42));
 
-    EXPECT_THAT(*d.preorder(), testing::ElementsAre(69, 42, 1337));
-    EXPECT_THAT(*d.inorder(), testing::ElementsAre(42, 69, 1337));
-    EXPECT_THAT(*d.postorder(), testing::ElementsAre(42, 1337, 69));
+    EXPECT_THAT(*d.preorder(), testing::ElementsAre(69, 1, 42, 420));
+    EXPECT_THAT(*d.inorder(), testing::ElementsAre(1, 42, 69, 420));
+    EXPECT_THAT(*d.postorder(), testing::ElementsAre(42, 1, 420, 69));
 
     EXPECT_TRUE(d.remove(69));
     EXPECT_FALSE(d.remove(69));
 
-    EXPECT_THAT(*d.preorder(), testing::ElementsAre(42, 1337));
-    EXPECT_THAT(*d.inorder(), testing::ElementsAre(42, 1337));
-    EXPECT_THAT(*d.postorder(), testing::ElementsAre(1337, 42));
+    EXPECT_THAT(*d.preorder(), testing::ElementsAre(42, 1, 420));
+    EXPECT_THAT(*d.inorder(), testing::ElementsAre(1, 42, 420));
+    EXPECT_THAT(*d.postorder(), testing::ElementsAre(1, 420, 42));
 }
 
 TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Inbetween_Right) {
