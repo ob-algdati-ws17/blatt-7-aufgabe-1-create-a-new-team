@@ -4,6 +4,8 @@
 TEST(AVLTreeTest, AVLTreeTest_EmptyTest) {
     avl_tree d;
     EXPECT_EQ(nullptr, d.preorder());
+    EXPECT_EQ(nullptr, d.inorder());
+    EXPECT_EQ(nullptr, d.postorder());
 }
 
 TEST(AVLTreeTest, AVLTreeTest_SearchTest_NonExistingKey) {
@@ -273,6 +275,6 @@ TEST(AVLTreeTest, AVLTreeTest_RemoveTest_Inbetween_Left) {
     EXPECT_FALSE(d.remove(42));
 
     EXPECT_THAT(*d.preorder(), testing::ElementsAre(420, 1, 69, 1337, 666, 9001));
-    //EXPECT_THAT(*d.inorder(), testing::ElementsAre(1, 69, 420, 666, 1337, 9001));
-    //EXPECT_THAT(*d.postorder(), testing::ElementsAre(1, 69, 666, 9001, 1337, 420));
+    EXPECT_THAT(*d.inorder(), testing::ElementsAre(1, 69, 420, 666, 1337, 9001));
+    EXPECT_THAT(*d.postorder(), testing::ElementsAre(69, 1, 666, 9001, 1337, 420));
 }
