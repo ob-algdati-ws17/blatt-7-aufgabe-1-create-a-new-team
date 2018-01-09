@@ -219,10 +219,6 @@ void avl_tree::update_height(typename avl_tree::node *nude) {
 
 /* Returns the balance factor of the node */
 const int avl_tree::balance_factor(typename avl_tree::node *nude) {
-	if (nude == nullptr) {
-		return 0;
-	}
-
 	int left = nude->left != nullptr ? nude->left->height : 0;
 	int right = nude->right != nullptr ? nude->right->height : 0;
 	return left - right;
