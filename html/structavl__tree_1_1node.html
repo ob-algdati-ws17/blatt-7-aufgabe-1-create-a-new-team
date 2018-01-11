@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,17 +116,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3e7851f7104dd71af924b27e70d80f3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e7851f7104dd71af924b27e70d80f3a"></a>
-<a class="el" href="structavl__tree_1_1node.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>left</b> = nullptr</td></tr>
+<tr class="memitem:a3e7851f7104dd71af924b27e70d80f3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structavl__tree_1_1node.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structavl__tree_1_1node.html#a3e7851f7104dd71af924b27e70d80f3a">left</a> = nullptr</td></tr>
 <tr class="separator:a3e7851f7104dd71af924b27e70d80f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff21ea47ae19da99113bd7900fb69785"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff21ea47ae19da99113bd7900fb69785"></a>
-<a class="el" href="structavl__tree_1_1node.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>right</b> = nullptr</td></tr>
+<tr class="memitem:aff21ea47ae19da99113bd7900fb69785"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structavl__tree_1_1node.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structavl__tree_1_1node.html#aff21ea47ae19da99113bd7900fb69785">right</a> = nullptr</td></tr>
 <tr class="separator:aff21ea47ae19da99113bd7900fb69785"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07b67fe6e79e2272835dd6485272b823"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07b67fe6e79e2272835dd6485272b823"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>key</b></td></tr>
+<tr class="memitem:a07b67fe6e79e2272835dd6485272b823"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structavl__tree_1_1node.html#a07b67fe6e79e2272835dd6485272b823">key</a></td></tr>
 <tr class="separator:a07b67fe6e79e2272835dd6485272b823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57a93259cb3f71b15fe737a559d8f0cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57a93259cb3f71b15fe737a559d8f0cc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> = 1</td></tr>
+<tr class="memitem:a57a93259cb3f71b15fe737a559d8f0cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structavl__tree_1_1node.html#a57a93259cb3f71b15fe737a559d8f0cc">height</a> = 1</td></tr>
 <tr class="separator:a57a93259cb3f71b15fe737a559d8f0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -186,6 +183,59 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> = 1</td></t
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a57a93259cb3f71b15fe737a559d8f0cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avl_tree::node::height = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Current height of this node. </p>
+
+</div>
+</div>
+<a class="anchor" id="a07b67fe6e79e2272835dd6485272b823"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int avl_tree::node::key</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Key identifying this node. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3e7851f7104dd71af924b27e70d80f3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structavl__tree_1_1node.html">node</a>* avl_tree::node::left = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Left child of this node. </p>
+
+</div>
+</div>
+<a class="anchor" id="aff21ea47ae19da99113bd7900fb69785"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structavl__tree_1_1node.html">node</a>* avl_tree::node::right = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Right child of this node. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/<a class="el" href="avl__tree_8h_source.html">avl_tree.h</a></li>
 <li>/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.cpp</li>
@@ -193,7 +243,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> = 1</td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 11 2018 19:27:58 for avltree by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 11 2018 20:37:49 for avltree by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

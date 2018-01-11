@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -102,6 +103,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aae7f6a688cb231f6ddbfa486f61b18f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae7f6a688cb231f6ddbfa486f61b18f4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classavl__tree.html#aae7f6a688cb231f6ddbfa486f61b18f4">~avl_tree</a> ()</td></tr>
+<tr class="memdesc:aae7f6a688cb231f6ddbfa486f61b18f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor deleting all nodes. <br/></td></tr>
+<tr class="separator:aae7f6a688cb231f6ddbfa486f61b18f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7554d1333ab18cdb9472bdfab183bf28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7554d1333ab18cdb9472bdfab183bf28"></a>
 const <a class="el" href="structavl__tree_1_1node.html">node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>search</b> (int)</td></tr>
 <tr class="separator:a7554d1333ab18cdb9472bdfab183bf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,27 +116,85 @@ const bool&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (int
 <tr class="memitem:a6ea8ac86887224e777c3531d5fa347f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ea8ac86887224e777c3531d5fa347f8"></a>
 const bool&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (int)</td></tr>
 <tr class="separator:a6ea8ac86887224e777c3531d5fa347f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54d8bd6f3b5d23e9c6ed2ca3046e2f51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54d8bd6f3b5d23e9c6ed2ca3046e2f51"></a>
-vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>preorder</b> () const </td></tr>
+<tr class="memitem:a54d8bd6f3b5d23e9c6ed2ca3046e2f51"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classavl__tree.html#a54d8bd6f3b5d23e9c6ed2ca3046e2f51">preorder</a> () const </td></tr>
+<tr class="memdesc:a54d8bd6f3b5d23e9c6ed2ca3046e2f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get tree in 'preorder'.  <a href="#a54d8bd6f3b5d23e9c6ed2ca3046e2f51">More...</a><br/></td></tr>
 <tr class="separator:a54d8bd6f3b5d23e9c6ed2ca3046e2f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c35affd0642ddd8fa6e1bea92e9dfb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c35affd0642ddd8fa6e1bea92e9dfb9"></a>
-vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>inorder</b> () const </td></tr>
+<tr class="memitem:a9c35affd0642ddd8fa6e1bea92e9dfb9"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classavl__tree.html#a9c35affd0642ddd8fa6e1bea92e9dfb9">inorder</a> () const </td></tr>
+<tr class="memdesc:a9c35affd0642ddd8fa6e1bea92e9dfb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get tree in 'inorder'.  <a href="#a9c35affd0642ddd8fa6e1bea92e9dfb9">More...</a><br/></td></tr>
 <tr class="separator:a9c35affd0642ddd8fa6e1bea92e9dfb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a153a69d4bfe9952ec59c18c76cb5932d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a153a69d4bfe9952ec59c18c76cb5932d"></a>
-vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>postorder</b> () const </td></tr>
+<tr class="memitem:a153a69d4bfe9952ec59c18c76cb5932d"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classavl__tree.html#a153a69d4bfe9952ec59c18c76cb5932d">postorder</a> () const </td></tr>
+<tr class="memdesc:a153a69d4bfe9952ec59c18c76cb5932d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get tree in 'postorder'.  <a href="#a153a69d4bfe9952ec59c18c76cb5932d">More...</a><br/></td></tr>
 <tr class="separator:a153a69d4bfe9952ec59c18c76cb5932d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of a binary AVL tree. </p>
 <p>This implementation only saves keys. These keys must be integers. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9c35affd0642ddd8fa6e1bea92e9dfb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; * avl_tree::inorder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get tree in 'inorder'. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="structavl__tree_1_1node.html#ac0a51c1a20c50c9c4e0d7037e28afbc2" title="Get subtree from this node in &#39;inorder&#39;. ">avl_tree::node::inorder</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>tree in 'inorder' </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a153a69d4bfe9952ec59c18c76cb5932d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; * avl_tree::postorder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get tree in 'postorder'. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="structavl__tree_1_1node.html#abe9f3981d8b35f0816657345eeada0a2" title="Get subtree from this node in &#39;postorder&#39;. ">avl_tree::node::postorder</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>tree in 'postorder' </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a54d8bd6f3b5d23e9c6ed2ca3046e2f51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; * avl_tree::preorder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get tree in 'preorder'. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="structavl__tree_1_1node.html#a6932b4c28a69e1adc86f41f74e16cd6e" title="Get subtree from this node in &#39;preorder&#39;. ">avl_tree::node::preorder</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>tree in 'preorder' </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/<a class="el" href="avl__tree_8h_source.html">avl_tree.h</a></li>
 <li>/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 11 2018 19:27:58 for avltree by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 11 2018 20:37:49 for avltree by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

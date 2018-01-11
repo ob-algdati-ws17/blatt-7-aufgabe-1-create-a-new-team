@@ -18,6 +18,9 @@ struct \hyperlink{structavl__tree_1_1node}{node}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hypertarget{classavl__tree_aae7f6a688cb231f6ddbfa486f61b18f4}{\hyperlink{classavl__tree_aae7f6a688cb231f6ddbfa486f61b18f4}{$\sim$avl\-\_\-tree} ()}\label{classavl__tree_aae7f6a688cb231f6ddbfa486f61b18f4}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor deleting all nodes. \end{DoxyCompactList}\item 
 \hypertarget{classavl__tree_a7554d1333ab18cdb9472bdfab183bf28}{const \hyperlink{structavl__tree_1_1node}{node} $\ast$ {\bfseries search} (int)}\label{classavl__tree_a7554d1333ab18cdb9472bdfab183bf28}
 
 \item 
@@ -27,21 +30,72 @@ struct \hyperlink{structavl__tree_1_1node}{node}
 \hypertarget{classavl__tree_a6ea8ac86887224e777c3531d5fa347f8}{const bool {\bfseries remove} (int)}\label{classavl__tree_a6ea8ac86887224e777c3531d5fa347f8}
 
 \item 
-\hypertarget{classavl__tree_a54d8bd6f3b5d23e9c6ed2ca3046e2f51}{vector$<$ int $>$ $\ast$ {\bfseries preorder} () const }\label{classavl__tree_a54d8bd6f3b5d23e9c6ed2ca3046e2f51}
-
-\item 
-\hypertarget{classavl__tree_a9c35affd0642ddd8fa6e1bea92e9dfb9}{vector$<$ int $>$ $\ast$ {\bfseries inorder} () const }\label{classavl__tree_a9c35affd0642ddd8fa6e1bea92e9dfb9}
-
-\item 
-\hypertarget{classavl__tree_a153a69d4bfe9952ec59c18c76cb5932d}{vector$<$ int $>$ $\ast$ {\bfseries postorder} () const }\label{classavl__tree_a153a69d4bfe9952ec59c18c76cb5932d}
-
-\end{DoxyCompactItemize}
+vector$<$ int $>$ $\ast$ \hyperlink{classavl__tree_a54d8bd6f3b5d23e9c6ed2ca3046e2f51}{preorder} () const 
+\begin{DoxyCompactList}\small\item\em Get tree in 'preorder'. \end{DoxyCompactList}\item 
+vector$<$ int $>$ $\ast$ \hyperlink{classavl__tree_a9c35affd0642ddd8fa6e1bea92e9dfb9}{inorder} () const 
+\begin{DoxyCompactList}\small\item\em Get tree in 'inorder'. \end{DoxyCompactList}\item 
+vector$<$ int $>$ $\ast$ \hyperlink{classavl__tree_a153a69d4bfe9952ec59c18c76cb5932d}{postorder} () const 
+\begin{DoxyCompactList}\small\item\em Get tree in 'postorder'. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Implementation of a binary A\-V\-L tree. 
 
 This implementation only saves keys. These keys must be integers. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classavl__tree_a9c35affd0642ddd8fa6e1bea92e9dfb9}{\index{avl\-\_\-tree@{avl\-\_\-tree}!inorder@{inorder}}
+\index{inorder@{inorder}!avl_tree@{avl\-\_\-tree}}
+\subsubsection[{inorder}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ $\ast$ avl\-\_\-tree\-::inorder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classavl__tree_a9c35affd0642ddd8fa6e1bea92e9dfb9}
+
+
+Get tree in 'inorder'. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structavl__tree_1_1node_ac0a51c1a20c50c9c4e0d7037e28afbc2}{avl\-\_\-tree\-::node\-::inorder} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+tree in 'inorder' 
+\end{DoxyReturn}
+\hypertarget{classavl__tree_a153a69d4bfe9952ec59c18c76cb5932d}{\index{avl\-\_\-tree@{avl\-\_\-tree}!postorder@{postorder}}
+\index{postorder@{postorder}!avl_tree@{avl\-\_\-tree}}
+\subsubsection[{postorder}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ $\ast$ avl\-\_\-tree\-::postorder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classavl__tree_a153a69d4bfe9952ec59c18c76cb5932d}
+
+
+Get tree in 'postorder'. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structavl__tree_1_1node_abe9f3981d8b35f0816657345eeada0a2}{avl\-\_\-tree\-::node\-::postorder} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+tree in 'postorder' 
+\end{DoxyReturn}
+\hypertarget{classavl__tree_a54d8bd6f3b5d23e9c6ed2ca3046e2f51}{\index{avl\-\_\-tree@{avl\-\_\-tree}!preorder@{preorder}}
+\index{preorder@{preorder}!avl_tree@{avl\-\_\-tree}}
+\subsubsection[{preorder}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ $\ast$ avl\-\_\-tree\-::preorder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classavl__tree_a54d8bd6f3b5d23e9c6ed2ca3046e2f51}
+
+
+Get tree in 'preorder'. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structavl__tree_1_1node_a6932b4c28a69e1adc86f41f74e16cd6e}{avl\-\_\-tree\-::node\-::preorder} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+tree in 'preorder' 
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
