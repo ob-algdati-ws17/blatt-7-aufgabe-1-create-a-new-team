@@ -1,8 +1,16 @@
 language: cpp
 
+branches:
+  except:
+    - gh-pages
 compiler:
   - clang
   - gcc
+env:
+  global:
+    - GH_REPO_NAME: blatt-7-aufgabe-1-create-a-new-team
+    - DOXYFILE: $TRAVIS_BUILD_DIR/doxyfile.in
+    - GH_REPO_REF: github.com/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team.git
 addons:
   apt:
     packages:
@@ -10,9 +18,10 @@ addons:
       - doxygen-gui
       - doxygen-doc
       - doxygen-latex
+      - graphviz
     sources:
       - ubuntu-toolchain-r-test
-      
+
 before_install:
   - pip install --user cpp-coveralls
 
@@ -21,3 +30,6 @@ script:
   
 after_success:
 - coveralls --root .. -E ".*googletest-src.*" -E ".*gtest.*" -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*"
+- cd $TRAVIS_BUILD_DIR
+- chmod +x generateDocumentationAndDeploy.sh
+- ./generateDocumentationAndDeploy.sh
