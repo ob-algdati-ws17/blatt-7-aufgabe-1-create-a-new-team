@@ -21,15 +21,12 @@ struct \hyperlink{structavl__tree_1_1node}{node}
 \hypertarget{classavl__tree_aae7f6a688cb231f6ddbfa486f61b18f4}{\hyperlink{classavl__tree_aae7f6a688cb231f6ddbfa486f61b18f4}{$\sim$avl\-\_\-tree} ()}\label{classavl__tree_aae7f6a688cb231f6ddbfa486f61b18f4}
 
 \begin{DoxyCompactList}\small\item\em Deconstructor deleting all nodes. \end{DoxyCompactList}\item 
-\hypertarget{classavl__tree_a7554d1333ab18cdb9472bdfab183bf28}{const \hyperlink{structavl__tree_1_1node}{node} $\ast$ {\bfseries search} (int)}\label{classavl__tree_a7554d1333ab18cdb9472bdfab183bf28}
-
-\item 
-\hypertarget{classavl__tree_a671d955359a56db67f09bc5dea32201a}{const bool {\bfseries insert} (int)}\label{classavl__tree_a671d955359a56db67f09bc5dea32201a}
-
-\item 
-\hypertarget{classavl__tree_a6ea8ac86887224e777c3531d5fa347f8}{const bool {\bfseries remove} (int)}\label{classavl__tree_a6ea8ac86887224e777c3531d5fa347f8}
-
-\item 
+const \hyperlink{structavl__tree_1_1node}{node} $\ast$ \hyperlink{classavl__tree_a7554d1333ab18cdb9472bdfab183bf28}{search} (int)
+\begin{DoxyCompactList}\small\item\em Find node with given key in this tree,. \end{DoxyCompactList}\item 
+const bool \hyperlink{classavl__tree_a671d955359a56db67f09bc5dea32201a}{insert} (int)
+\begin{DoxyCompactList}\small\item\em Insert a new node into this tree. If a node with the given key already exists nothing happens. \end{DoxyCompactList}\item 
+const bool \hyperlink{classavl__tree_a6ea8ac86887224e777c3531d5fa347f8}{remove} (int)
+\begin{DoxyCompactList}\small\item\em Remove node with given key from this tree. If no node with given key is found, nothing happens. \end{DoxyCompactList}\item 
 vector$<$ int $>$ $\ast$ \hyperlink{classavl__tree_a54d8bd6f3b5d23e9c6ed2ca3046e2f51}{preorder} () const 
 \begin{DoxyCompactList}\small\item\em Get tree in 'preorder'. \end{DoxyCompactList}\item 
 vector$<$ int $>$ $\ast$ \hyperlink{classavl__tree_a9c35affd0642ddd8fa6e1bea92e9dfb9}{inorder} () const 
@@ -60,6 +57,25 @@ Get tree in 'inorder'.
 \end{DoxySeeAlso}
 \begin{DoxyReturn}{Returns}
 tree in 'inorder' 
+\end{DoxyReturn}
+\hypertarget{classavl__tree_a671d955359a56db67f09bc5dea32201a}{\index{avl\-\_\-tree@{avl\-\_\-tree}!insert@{insert}}
+\index{insert@{insert}!avl_tree@{avl\-\_\-tree}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}const bool avl\-\_\-tree\-::insert (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{classavl__tree_a671d955359a56db67f09bc5dea32201a}
+
+
+Insert a new node into this tree. If a node with the given key already exists nothing happens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key of node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if insertion was successful 
 \end{DoxyReturn}
 \hypertarget{classavl__tree_a153a69d4bfe9952ec59c18c76cb5932d}{\index{avl\-\_\-tree@{avl\-\_\-tree}!postorder@{postorder}}
 \index{postorder@{postorder}!avl_tree@{avl\-\_\-tree}}
@@ -94,6 +110,44 @@ Get tree in 'preorder'.
 \end{DoxySeeAlso}
 \begin{DoxyReturn}{Returns}
 tree in 'preorder' 
+\end{DoxyReturn}
+\hypertarget{classavl__tree_a6ea8ac86887224e777c3531d5fa347f8}{\index{avl\-\_\-tree@{avl\-\_\-tree}!remove@{remove}}
+\index{remove@{remove}!avl_tree@{avl\-\_\-tree}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}const bool avl\-\_\-tree\-::remove (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{classavl__tree_a6ea8ac86887224e777c3531d5fa347f8}
+
+
+Remove node with given key from this tree. If no node with given key is found, nothing happens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key of node to be deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if removal was successful 
+\end{DoxyReturn}
+\hypertarget{classavl__tree_a7554d1333ab18cdb9472bdfab183bf28}{\index{avl\-\_\-tree@{avl\-\_\-tree}!search@{search}}
+\index{search@{search}!avl_tree@{avl\-\_\-tree}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf avl\-\_\-tree\-::node} $\ast$ avl\-\_\-tree\-::search (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{classavl__tree_a7554d1333ab18cdb9472bdfab183bf28}
+
+
+Find node with given key in this tree,. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key of searched node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node with given key or nullptr if no matching node found 
 \end{DoxyReturn}
 
 
