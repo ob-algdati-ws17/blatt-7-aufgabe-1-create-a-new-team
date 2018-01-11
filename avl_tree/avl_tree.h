@@ -6,8 +6,19 @@
 
 using namespace std;
 
+/**
+ * \brief Implementation of a binary AVL tree.
+ *
+ * This implementation only saves keys. These keys must be integers.
+ */
 class avl_tree {
 	public:
+
+		/**
+		 * \brief Entry of AVL-Tree.
+		 *
+		 * Consists of key and pointers to its children.
+		 */
 		struct node {
 			node *left = nullptr;
 			node *right = nullptr;
@@ -16,8 +27,20 @@ class avl_tree {
 
 			node(int);
 
+			/**
+			 * \brief Get subtree from this node in 'preorder'.
+			 * \return subtree in 'preorder'
+			 */
             vector<int> *preorder() const;  // (Hauptreihenfolge)
+			/**
+			 * \brief Get subtree from this node in 'inorder'.
+			 * \return subtree in 'inorder'
+			 */
             vector<int> *inorder() const;   // (Symmetrische Reihenfolge)
+			/**
+			 * \brief Get subtree from this node in 'postorder'.
+			 * \return subtree in 'postorder'
+			 */
             vector<int> *postorder() const; // (Nebenreihenfolge)
 		};
 		~avl_tree();
