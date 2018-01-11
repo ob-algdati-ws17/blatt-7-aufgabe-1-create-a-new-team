@@ -20,9 +20,21 @@ class avl_tree {
 		 * Consists of key and pointers to its children.
 		 */
 		struct node {
+			/**
+			 * Left child of this node.
+			 */
 			node *left = nullptr;
+			/**
+			 * Right child of this node.
+			 */
 			node *right = nullptr;
+			/**
+			 * Key identifying this node.
+			 */
 			int key;
+			/**
+			 * Current height of this node.
+			 */
 			int height = 1;
 
 			node(int);
@@ -43,12 +55,30 @@ class avl_tree {
 			 */
             vector<int> *postorder() const; // (Nebenreihenfolge)
 		};
+		/**
+		 * \brief Deconstructor deleting all nodes.
+		 */
 		~avl_tree();
 		const node *search(int);
 		const bool insert(int);
 		const bool remove(int);
+		/**
+		 * \brief Get tree in 'preorder'.
+		 * \sa avl_tree::node::preorder
+		 * \return tree in 'preorder'
+		 */
         vector<int> *preorder() const;  // (Hauptreihenfolge)
+		/**
+		 * \brief Get tree in 'inorder'.
+		 * \sa avl_tree::node::inorder
+		 * \return tree in 'inorder'
+		 */
         vector<int> *inorder() const;   // (Symmetrische Reihenfolge)
+		/**
+		 * \brief Get tree in 'postorder'.
+		 * \sa avl_tree::node::postorder
+		 * \return tree in 'postorder'
+		 */
         vector<int> *postorder() const; // (Nebenreihenfolge)
 	private:
 		node *root = nullptr;
