@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\test_avl_tree.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\test_avl_tree.dir/objects.a @CMakeFiles\test_avl_tree.dir\objects1.rsp
-C:\MinGW\bin\g++.exe  -fprofile-arcs -ftest-coverage -g   -Wl,--whole-archive CMakeFiles\test_avl_tree.dir/objects.a -Wl,--no-whole-archive  -o test_avl_tree.exe -Wl,--out-implib,libtest_avl_tree.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test_avl_tree.dir\linklibs.rsp
