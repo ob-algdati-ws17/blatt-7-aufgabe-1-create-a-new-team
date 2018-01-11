@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,10 +88,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">avl_tree Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementation of a binary AVL tree.  
+ <a href="classavl__tree.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="avl__tree_8h_source.html">avl_tree.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structavl__tree_1_1node.html">node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entry of AVL-Tree.  <a href="structavl__tree_1_1node.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -114,14 +121,17 @@ vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>inor
 vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>postorder</b> () const </td></tr>
 <tr class="separator:a153a69d4bfe9952ec59c18c76cb5932d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation of a binary AVL tree. </p>
+<p>This implementation only saves keys. These keys must be integers. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/<a class="el" href="avl__tree_8h_source.html">avl_tree.h</a></li>
 <li>/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 11 2018 19:08:15 for avltree by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 11 2018 19:26:11 for avltree by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

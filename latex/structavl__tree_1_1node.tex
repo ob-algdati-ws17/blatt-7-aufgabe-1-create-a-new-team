@@ -1,21 +1,27 @@
 \hypertarget{structavl__tree_1_1node}{\section{avl\-\_\-tree\-:\-:node Struct Reference}
 \label{structavl__tree_1_1node}\index{avl\-\_\-tree\-::node@{avl\-\_\-tree\-::node}}
 }
+
+
+Entry of A\-V\-L-\/\-Tree.  
+
+
+
+
+{\ttfamily \#include $<$avl\-\_\-tree.\-h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{structavl__tree_1_1node_a94e7fa472a575bbcae1e506c4c8b3534}{{\bfseries node} (int)}\label{structavl__tree_1_1node_a94e7fa472a575bbcae1e506c4c8b3534}
 
 \item 
-\hypertarget{structavl__tree_1_1node_a6932b4c28a69e1adc86f41f74e16cd6e}{vector$<$ int $>$ $\ast$ {\bfseries preorder} () const }\label{structavl__tree_1_1node_a6932b4c28a69e1adc86f41f74e16cd6e}
-
-\item 
-\hypertarget{structavl__tree_1_1node_ac0a51c1a20c50c9c4e0d7037e28afbc2}{vector$<$ int $>$ $\ast$ {\bfseries inorder} () const }\label{structavl__tree_1_1node_ac0a51c1a20c50c9c4e0d7037e28afbc2}
-
-\item 
-\hypertarget{structavl__tree_1_1node_abe9f3981d8b35f0816657345eeada0a2}{vector$<$ int $>$ $\ast$ {\bfseries postorder} () const }\label{structavl__tree_1_1node_abe9f3981d8b35f0816657345eeada0a2}
-
-\end{DoxyCompactItemize}
+vector$<$ int $>$ $\ast$ \hyperlink{structavl__tree_1_1node_a6932b4c28a69e1adc86f41f74e16cd6e}{preorder} () const 
+\begin{DoxyCompactList}\small\item\em Get subtree from this node in 'preorder'. \end{DoxyCompactList}\item 
+vector$<$ int $>$ $\ast$ \hyperlink{structavl__tree_1_1node_ac0a51c1a20c50c9c4e0d7037e28afbc2}{inorder} () const 
+\begin{DoxyCompactList}\small\item\em Get subtree from this node in 'inorder'. \end{DoxyCompactList}\item 
+vector$<$ int $>$ $\ast$ \hyperlink{structavl__tree_1_1node_abe9f3981d8b35f0816657345eeada0a2}{postorder} () const 
+\begin{DoxyCompactList}\small\item\em Get subtree from this node in 'postorder'. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,6 +37,56 @@
 \hypertarget{structavl__tree_1_1node_a57a93259cb3f71b15fe737a559d8f0cc}{int {\bfseries height} = 1}\label{structavl__tree_1_1node_a57a93259cb3f71b15fe737a559d8f0cc}
 
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Entry of A\-V\-L-\/\-Tree. 
+
+Consists of key and pointers to its children. 
+
+\subsection{Member Function Documentation}
+\hypertarget{structavl__tree_1_1node_ac0a51c1a20c50c9c4e0d7037e28afbc2}{\index{avl\-\_\-tree\-::node@{avl\-\_\-tree\-::node}!inorder@{inorder}}
+\index{inorder@{inorder}!avl_tree::node@{avl\-\_\-tree\-::node}}
+\subsubsection[{inorder}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ $\ast$ avl\-\_\-tree\-::node\-::inorder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{structavl__tree_1_1node_ac0a51c1a20c50c9c4e0d7037e28afbc2}
+
+
+Get subtree from this node in 'inorder'. 
+
+\begin{DoxyReturn}{Returns}
+subtree in 'inorder' 
+\end{DoxyReturn}
+\hypertarget{structavl__tree_1_1node_abe9f3981d8b35f0816657345eeada0a2}{\index{avl\-\_\-tree\-::node@{avl\-\_\-tree\-::node}!postorder@{postorder}}
+\index{postorder@{postorder}!avl_tree::node@{avl\-\_\-tree\-::node}}
+\subsubsection[{postorder}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ $\ast$ avl\-\_\-tree\-::node\-::postorder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{structavl__tree_1_1node_abe9f3981d8b35f0816657345eeada0a2}
+
+
+Get subtree from this node in 'postorder'. 
+
+\begin{DoxyReturn}{Returns}
+subtree in 'postorder' 
+\end{DoxyReturn}
+\hypertarget{structavl__tree_1_1node_a6932b4c28a69e1adc86f41f74e16cd6e}{\index{avl\-\_\-tree\-::node@{avl\-\_\-tree\-::node}!preorder@{preorder}}
+\index{preorder@{preorder}!avl_tree::node@{avl\-\_\-tree\-::node}}
+\subsubsection[{preorder}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ $\ast$ avl\-\_\-tree\-::node\-::preorder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{structavl__tree_1_1node_a6932b4c28a69e1adc86f41f74e16cd6e}
+
+
+Get subtree from this node in 'preorder'. 
+
+\begin{DoxyReturn}{Returns}
+subtree in 'preorder' 
+\end{DoxyReturn}
 
 
 The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}

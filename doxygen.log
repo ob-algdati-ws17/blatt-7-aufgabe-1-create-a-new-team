@@ -1,19 +1,14 @@
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:9: warning: Compound avl_tree is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:11: warning: Compound avl_tree::node is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:24: warning: Member search(int) (function) of class avl_tree is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:25: warning: Member insert(int) (function) of class avl_tree is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:26: warning: Member remove(int) (function) of class avl_tree is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:27: warning: Member preorder() const  (function) of class avl_tree is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:28: warning: Member inorder() const  (function) of class avl_tree is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:29: warning: Member postorder() const  (function) of class avl_tree is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:17: warning: Member node(int) (function) of class avl_tree::node is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:19: warning: Member preorder() const  (function) of class avl_tree::node is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:20: warning: Member inorder() const  (function) of class avl_tree::node is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:21: warning: Member postorder() const  (function) of class avl_tree::node is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:12: warning: Member left (variable) of class avl_tree::node is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:13: warning: Member right (variable) of class avl_tree::node is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:14: warning: Member key (variable) of class avl_tree::node is not documented.
-/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:15: warning: Member height (variable) of class avl_tree::node is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:47: warning: Member search(int) (function) of class avl_tree is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:48: warning: Member insert(int) (function) of class avl_tree is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:49: warning: Member remove(int) (function) of class avl_tree is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:50: warning: Member preorder() const  (function) of class avl_tree is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:51: warning: Member inorder() const  (function) of class avl_tree is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:52: warning: Member postorder() const  (function) of class avl_tree is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:28: warning: Member node(int) (function) of class avl_tree::node is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:23: warning: Member left (variable) of class avl_tree::node is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:24: warning: Member right (variable) of class avl_tree::node is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:25: warning: Member key (variable) of class avl_tree::node is not documented.
+/home/travis/build/ob-algdati-ws17/blatt-7-aufgabe-1-create-a-new-team/avl_tree/avl_tree.h:26: warning: Member height (variable) of class avl_tree::node is not documented.
 Searching for include files...
 Searching for example files...
 Searching for images...
@@ -104,5 +99,5 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-lookup cache used 32/65536 hits=209 misses=36
+lookup cache used 36/65536 hits=215 misses=40
 finished...
