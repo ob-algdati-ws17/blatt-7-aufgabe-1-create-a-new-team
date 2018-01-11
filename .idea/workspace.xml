@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="AVLTree" targetName="gmock_main" />
+      <config projectName="AVLTree" targetName="gmock" />
+      <config projectName="AVLTree" targetName="gtest_main" />
+      <config projectName="AVLTree" targetName="test_avl_tree" />
+      <config projectName="AVLTree" targetName="gtest" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="404f9abd-5241-464b-9ffd-d96fe4f2e3ce" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="avl_tree.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+              <folding>
+                <element signature="e#47#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_avl_tree.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_avl_tree.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="avl_tree.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2040">
+              <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_avl_tree.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test_avl_tree.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#86#220#0" expanded="false" />
+                <element signature="e#278#336#0" expanded="false" />
+                <element signature="e#384#725#0" expanded="false" />
+                <element signature="e#774#1123#0" expanded="false" />
+                <element signature="e#1168#1343#0" expanded="false" />
+                <element signature="e#1388#1637#0" expanded="false" />
+                <element signature="e#1689#2032#0" expanded="false" />
+                <element signature="e#2085#2428#0" expanded="false" />
+                <element signature="e#2473#2891#0" expanded="false" />
+                <element signature="e#2943#3361#0" expanded="false" />
+                <element signature="e#3414#3832#0" expanded="false" />
+                <element signature="e#3877#4360#0" expanded="false" />
+                <element signature="e#4405#4968#0" expanded="false" />
+                <element signature="e#5013#5661#0" expanded="false" />
+                <element signature="e#5706#6439#0" expanded="false" />
+                <element signature="e#6484#6845#0" expanded="false" />
+                <element signature="e#6899#7487#0" expanded="false" />
+                <element signature="e#7540#7933#0" expanded="false" />
+                <element signature="e#7987#8733#0" expanded="false" />
+                <element signature="e#8792#9575#0" expanded="false" />
+                <element signature="e#9633#10418#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>POP</find>
+      <find>balance_f</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/avl_tree/avl_tree.h" />
+        <option value="$PROJECT_DIR$/avl_tree/avl_tree.cpp" />
+        <option value="$PROJECT_DIR$/test/test_avl_tree.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="2762" />
+    <option name="height" value="1770" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AVLTree" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="blatt-7-aufgabe-1-create-a-new-team" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AVLTree" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="blatt-7-aufgabe-1-create-a-new-team" type="462c0819:PsiDirectoryNode" />
+              <item name="avl_tree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AVLTree" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="blatt-7-aufgabe-1-create-a-new-team" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.test_avl_tree">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AVLTree" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AVLTree" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AVLTree" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AVLTree" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="test_avl_tree" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AVLTree" TARGET_NAME="test_avl_tree" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AVLTree" RUN_TARGET_NAME="test_avl_tree">
+      <envs />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.gmock" />
+      <item index="2" class="java.lang.String" itemvalue="Application.gmock_main" />
+      <item index="3" class="java.lang.String" itemvalue="Application.gtest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.gtest_main" />
+      <item index="5" class="java.lang.String" itemvalue="Application.test_avl_tree" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="404f9abd-5241-464b-9ffd-d96fe4f2e3ce" name="Default" comment="" />
+      <created>1514574317427</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514574317427</updated>
+      <workItem from="1514574318902" duration="131000" />
+      <workItem from="1515395929790" duration="5398000" />
+      <workItem from="1515404280549" duration="44000" />
+      <workItem from="1515407378416" duration="1876000" />
+      <workItem from="1515439289425" duration="12698000" />
+      <workItem from="1515491456823" duration="15757000" />
+      <workItem from="1515525422217" duration="602000" />
+      <workItem from="1515693231378" duration="641000" />
+    </task>
+    <task id="LOCAL-00001" summary="Wrote first tests, fixed insert">
+      <created>1515401210654</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1515401210654</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed remove">
+      <created>1515409057417</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1515409057417</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added traversal methods for better testing">
+      <created>1515444394672</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1515444394672</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Testing rotation and removal of root with two children">
+      <created>1515448196825</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1515448196825</updated>
+    </task>
+    <task id="LOCAL-00005" summary="More insertion tests (up to 7 elements)&#10;Testing removal of node with 2 children">
+      <created>1515459147607</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1515459147607</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed removal of node with two children">
+      <created>1515494444598</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1515494444598</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Extended emptytest">
+      <created>1515494649036</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1515494649036</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Test removal of node with two children where left child has additional children">
+      <created>1515496611347</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1515496611347</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Double Rotation tested">
+      <created>1515498106584</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1515498106584</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Double Rotation leftside tested">
+      <created>1515499555281</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1515499555281</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Search and Height tested">
+      <created>1515500745719</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1515500745719</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixed left double rotation test">
+      <created>1515501160836</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1515501160836</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Removed unreachable code">
+      <created>1515502163539</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1515502163539</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Test remove of root with left child">
+      <created>1515504191043</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1515504191043</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Test removal of root with two children where its left child has a right child">
+      <created>1515506229433</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1515506229433</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Test removal of left node with two children where its left child has two children">
+      <created>1515508643156</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1515508643156</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Test removal of end leafs and removal of nodes (not root) with one child">
+      <created>1515510614601</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1515510614601</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="37147000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17703" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24945135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39870968" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Wrote first tests, fixed insert" />
+    <MESSAGE value="Fixed remove" />
+    <MESSAGE value="Added traversal methods for better testing" />
+    <MESSAGE value="Testing rotation and removal of root with two children" />
+    <MESSAGE value="More insertion tests (up to 7 elements)&#10;Testing removal of node with 2 children" />
+    <MESSAGE value="Fixed removal of node with two children" />
+    <MESSAGE value="Extended emptytest" />
+    <MESSAGE value="Test removal of node with two children where left child has additional children" />
+    <MESSAGE value="Double Rotation tested" />
+    <MESSAGE value="Double Rotation leftside tested" />
+    <MESSAGE value="Search and Height tested" />
+    <MESSAGE value="Fixed left double rotation test" />
+    <MESSAGE value="Removed unreachable code" />
+    <MESSAGE value="Test remove of root with left child" />
+    <MESSAGE value="Test removal of root with two children where its left child has a right child" />
+    <MESSAGE value="Test removal of left node with two children where its left child has two children" />
+    <MESSAGE value="Test removal of end leafs and removal of nodes (not root) with one child" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test removal of end leafs and removal of nodes (not root) with one child" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="13" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#86#220#0" expanded="false" />
+            <element signature="e#278#336#0" expanded="false" />
+            <element signature="e#384#725#0" expanded="false" />
+            <element signature="e#774#1123#0" expanded="false" />
+            <element signature="e#1168#1343#0" expanded="false" />
+            <element signature="e#1388#1637#0" expanded="false" />
+            <element signature="e#1689#2032#0" expanded="false" />
+            <element signature="e#2085#2428#0" expanded="false" />
+            <element signature="e#2473#2891#0" expanded="false" />
+            <element signature="e#2943#3361#0" expanded="false" />
+            <element signature="e#3414#3832#0" expanded="false" />
+            <element signature="e#3877#4360#0" expanded="false" />
+            <element signature="e#4405#4968#0" expanded="false" />
+            <element signature="e#5013#5661#0" expanded="false" />
+            <element signature="e#5706#6439#0" expanded="false" />
+            <element signature="e#6484#6845#0" expanded="false" />
+            <element signature="e#6899#7487#0" expanded="false" />
+            <element signature="e#7540#7933#0" expanded="false" />
+            <element signature="e#7987#8733#0" expanded="false" />
+            <element signature="e#8792#9575#0" expanded="false" />
+            <element signature="e#9633#10418#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#86#220#0" expanded="false" />
+            <element signature="e#278#336#0" expanded="false" />
+            <element signature="e#384#725#0" expanded="false" />
+            <element signature="e#774#1123#0" expanded="false" />
+            <element signature="e#1168#1343#0" expanded="false" />
+            <element signature="e#1388#1637#0" expanded="false" />
+            <element signature="e#1689#2032#0" expanded="false" />
+            <element signature="e#2085#2428#0" expanded="false" />
+            <element signature="e#2473#2891#0" expanded="false" />
+            <element signature="e#2943#3361#0" expanded="false" />
+            <element signature="e#3414#3832#0" expanded="false" />
+            <element signature="e#3877#4360#0" expanded="false" />
+            <element signature="e#4405#4968#0" expanded="false" />
+            <element signature="e#5013#5661#0" expanded="false" />
+            <element signature="e#5706#6439#0" expanded="false" />
+            <element signature="e#6484#6845#0" expanded="false" />
+            <element signature="e#6899#7487#0" expanded="false" />
+            <element signature="e#7540#7933#0" expanded="false" />
+            <element signature="e#7987#8733#0" expanded="false" />
+            <element signature="e#8792#9575#0" expanded="false" />
+            <element signature="e#9633#10418#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6018">
+          <caret line="354" column="24" lean-forward="false" selection-start-line="354" selection-start-column="24" selection-end-line="354" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3893">
+          <caret line="229" column="52" lean-forward="false" selection-start-line="229" selection-start-column="52" selection-end-line="229" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#86#220#0" expanded="false" />
+            <element signature="e#278#336#0" expanded="false" />
+            <element signature="e#384#725#0" expanded="false" />
+            <element signature="e#774#1123#0" expanded="false" />
+            <element signature="e#1168#1343#0" expanded="false" />
+            <element signature="e#1388#1637#0" expanded="false" />
+            <element signature="e#1689#2032#0" expanded="false" />
+            <element signature="e#2085#2428#0" expanded="false" />
+            <element signature="e#2473#2891#0" expanded="false" />
+            <element signature="e#2943#3361#0" expanded="false" />
+            <element signature="e#3414#3832#0" expanded="false" />
+            <element signature="e#3877#4360#0" expanded="false" />
+            <element signature="e#4405#4968#0" expanded="false" />
+            <element signature="e#5013#5661#0" expanded="false" />
+            <element signature="e#5706#6439#0" expanded="false" />
+            <element signature="e#6484#6845#0" expanded="false" />
+            <element signature="e#6899#7487#0" expanded="false" />
+            <element signature="e#7540#7933#0" expanded="false" />
+            <element signature="e#7987#8733#0" expanded="false" />
+            <element signature="e#8792#9575#0" expanded="false" />
+            <element signature="e#9633#10418#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="6" lean-forward="false" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#86#220#0" expanded="false" />
+            <element signature="e#278#336#0" expanded="false" />
+            <element signature="e#384#725#0" expanded="false" />
+            <element signature="e#774#1123#0" expanded="false" />
+            <element signature="e#1168#1343#0" expanded="false" />
+            <element signature="e#1388#1637#0" expanded="false" />
+            <element signature="e#1689#2032#0" expanded="false" />
+            <element signature="e#2085#2428#0" expanded="false" />
+            <element signature="e#2473#2891#0" expanded="false" />
+            <element signature="e#2943#3361#0" expanded="false" />
+            <element signature="e#3414#3832#0" expanded="false" />
+            <element signature="e#3877#4360#0" expanded="false" />
+            <element signature="e#4405#4968#0" expanded="false" />
+            <element signature="e#5013#5661#0" expanded="false" />
+            <element signature="e#5706#6439#0" expanded="false" />
+            <element signature="e#6484#6845#0" expanded="false" />
+            <element signature="e#6899#7487#0" expanded="false" />
+            <element signature="e#7540#7933#0" expanded="false" />
+            <element signature="e#7987#8733#0" expanded="false" />
+            <element signature="e#8792#9575#0" expanded="false" />
+            <element signature="e#9633#10418#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3332">
+          <caret line="196" column="26" lean-forward="false" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#86#220#0" expanded="false" />
+            <element signature="e#278#336#0" expanded="false" />
+            <element signature="e#384#725#0" expanded="false" />
+            <element signature="e#774#1123#0" expanded="false" />
+            <element signature="e#1168#1343#0" expanded="false" />
+            <element signature="e#1388#1637#0" expanded="false" />
+            <element signature="e#1689#2032#0" expanded="false" />
+            <element signature="e#2085#2428#0" expanded="false" />
+            <element signature="e#2473#2891#0" expanded="false" />
+            <element signature="e#2943#3361#0" expanded="false" />
+            <element signature="e#3414#3832#0" expanded="false" />
+            <element signature="e#3877#4360#0" expanded="false" />
+            <element signature="e#4405#4968#0" expanded="false" />
+            <element signature="e#5013#5661#0" expanded="false" />
+            <element signature="e#5706#6439#0" expanded="false" />
+            <element signature="e#6484#6845#0" expanded="false" />
+            <element signature="e#6899#7487#0" expanded="false" />
+            <element signature="e#7540#7933#0" expanded="false" />
+            <element signature="e#7987#8733#0" expanded="false" />
+            <element signature="e#8792#9575#0" expanded="false" />
+            <element signature="e#9633#10418#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3332">
+          <caret line="196" column="26" lean-forward="true" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#86#220#0" expanded="false" />
+            <element signature="e#278#336#0" expanded="false" />
+            <element signature="e#384#725#0" expanded="false" />
+            <element signature="e#774#1123#0" expanded="false" />
+            <element signature="e#1168#1343#0" expanded="false" />
+            <element signature="e#1388#1637#0" expanded="false" />
+            <element signature="e#1689#2032#0" expanded="false" />
+            <element signature="e#2085#2428#0" expanded="false" />
+            <element signature="e#2473#2891#0" expanded="false" />
+            <element signature="e#2943#3361#0" expanded="false" />
+            <element signature="e#3414#3832#0" expanded="false" />
+            <element signature="e#3877#4360#0" expanded="false" />
+            <element signature="e#4405#4968#0" expanded="false" />
+            <element signature="e#5013#5661#0" expanded="false" />
+            <element signature="e#5706#6439#0" expanded="false" />
+            <element signature="e#6484#6845#0" expanded="false" />
+            <element signature="e#6899#7487#0" expanded="false" />
+            <element signature="e#7540#7933#0" expanded="false" />
+            <element signature="e#7987#8733#0" expanded="false" />
+            <element signature="e#8792#9575#0" expanded="false" />
+            <element signature="e#9633#10418#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avl_tree/avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_avl_tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#86#220#0" expanded="false" />
+            <element signature="e#278#336#0" expanded="false" />
+            <element signature="e#384#725#0" expanded="false" />
+            <element signature="e#774#1123#0" expanded="false" />
+            <element signature="e#1168#1343#0" expanded="false" />
+            <element signature="e#1388#1637#0" expanded="false" />
+            <element signature="e#1689#2032#0" expanded="false" />
+            <element signature="e#2085#2428#0" expanded="false" />
+            <element signature="e#2473#2891#0" expanded="false" />
+            <element signature="e#2943#3361#0" expanded="false" />
+            <element signature="e#3414#3832#0" expanded="false" />
+            <element signature="e#3877#4360#0" expanded="false" />
+            <element signature="e#4405#4968#0" expanded="false" />
+            <element signature="e#5013#5661#0" expanded="false" />
+            <element signature="e#5706#6439#0" expanded="false" />
+            <element signature="e#6484#6845#0" expanded="false" />
+            <element signature="e#6899#7487#0" expanded="false" />
+            <element signature="e#7540#7933#0" expanded="false" />
+            <element signature="e#7987#8733#0" expanded="false" />
+            <element signature="e#8792#9575#0" expanded="false" />
+            <element signature="e#9633#10418#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

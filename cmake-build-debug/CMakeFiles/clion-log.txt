@@ -1,0 +1,18 @@
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\dimik\CLionProjects\blatt-7-aufgabe-1-create-a-new-team
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/dimik/CLionProjects/blatt-7-aufgabe-1-create-a-new-team/cmake-build-debug/googletest-download
+[ 11%] Performing update step for 'googletest'
+From https://github.com/google/googletest
+   3d27bde..e194f52  master     -> origin/master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to origin/master.
+[ 22%] No configure step for 'googletest'
+[ 33%] No build step for 'googletest'
+[ 44%] No install step for 'googletest'
+[ 55%] No test step for 'googletest'
+[ 66%] Completed 'googletest'
+[100%] Built target googletest
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/dimik/CLionProjects/blatt-7-aufgabe-1-create-a-new-team/cmake-build-debug
