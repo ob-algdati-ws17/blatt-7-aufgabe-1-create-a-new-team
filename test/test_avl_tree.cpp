@@ -1,6 +1,9 @@
 #include "test_avl_tree.h"
 #include <memory>
 
+/**
+ * /test Test empty tree.
+ */
 TEST(AVLTreeTest, AVLTreeTest_EmptyTest) {
     avl_tree d;
     EXPECT_EQ(nullptr, d.preorder());
@@ -8,12 +11,18 @@ TEST(AVLTreeTest, AVLTreeTest_EmptyTest) {
     EXPECT_EQ(nullptr, d.postorder());
 }
 
+/**
+ * /test Test search with non existing key.
+ */
 TEST(AVLTreeTest, AVLTreeTest_SearchTest_NonExistingKey) {
     avl_tree d;
     EXPECT_EQ(nullptr, d.search(42));
 }
 
-TEST(AVLTreeTest, AVLTreeTest_SearchTest_Left) {
+/**
+ * /test Test insertion on left side.
+ */
+TEST(AVLTreeTest, AVLTreeTest_InsertionTest_Left) {
     avl_tree d;
     EXPECT_EQ(nullptr, d.search(42));
 
@@ -26,10 +35,15 @@ TEST(AVLTreeTest, AVLTreeTest_SearchTest_Left) {
     EXPECT_EQ(2, root->height);
 
     auto node = d.search(42);
+    EXPECT_EQ(node, root->left);
+    EXPECT_EQ(nullptr, root->right);
     EXPECT_EQ(42, node->key);
     EXPECT_EQ(1, node->height);
 }
 
+/**
+ * /test Test insertion on right side.
+ */
 TEST(AVLTreeTest, AVLTreeTest_SearchTest_Right) {
     avl_tree d;
     EXPECT_EQ(nullptr, d.search(42));
@@ -43,20 +57,30 @@ TEST(AVLTreeTest, AVLTreeTest_SearchTest_Right) {
     EXPECT_EQ(2, root->height);
 
     auto node = d.search(1337);
+    EXPECT_EQ(node, root->right);
+    EXPECT_EQ(nullptr, root->left);
     EXPECT_EQ(1337, node->key);
     EXPECT_EQ(1, node->height);
 }
 
-TEST(AVLTreeTest, AVLTreeTest_SearchTest_1) {
+/**
+ * /test Test finding root.
+ */
+TEST(AVLTreeTest, AVLTreeTest_SearchTest_Root) {
     avl_tree d;
     EXPECT_TRUE(d.insert(42));
     EXPECT_FALSE(d.insert(42));
     auto node = d.search(42);
+    EXPECT_EQ(nullptr, node->right);
+    EXPECT_EQ(nullptr, node->left);
     EXPECT_EQ(42, node->key);
     EXPECT_EQ(1, node->height);
 }
 
-TEST(AVLTreeTest, AVLTreeTest_InsertTest_1) {
+/**
+ * /test Test inserting single element.
+ */
+TEST(AVLTreeTest, AVLTreeTest_InsertTest_Root) {
 	avl_tree d;
 	EXPECT_TRUE(d.insert(42));
     EXPECT_FALSE(d.insert(42));
@@ -66,7 +90,10 @@ TEST(AVLTreeTest, AVLTreeTest_InsertTest_1) {
     EXPECT_THAT(*d.postorder(), testing::ElementsAre(42));
 }
 
-TEST(AVLTreeTest, AVLTreeTest_InsertTest_2_Bigger) {
+/**
+ * /test Test inserting node bigger than root.
+ */
+TEST(AVLTreeTest, AVLTreeTest_InsertTest_2_Rightside) {
     avl_tree d;
     EXPECT_TRUE(d.insert(42));
     EXPECT_FALSE(d.insert(42));
@@ -78,7 +105,10 @@ TEST(AVLTreeTest, AVLTreeTest_InsertTest_2_Bigger) {
     EXPECT_THAT(*d.postorder(), testing::ElementsAre(1337, 42));
 }
 
-TEST(AVLTreeTest, AVLTreeTest_InsertTest_2_Smaller) {
+/**
+ * /test Test inserting node smaller than root.
+ */
+TEST(AVLTreeTest, AVLTreeTest_InsertTest_2_Leftside) {
     avl_tree d;
     EXPECT_TRUE(d.insert(1337));
     EXPECT_FALSE(d.insert(1337));

@@ -5,6 +5,10 @@
 #include "gmock/gmock.h"
 #include "avl_tree/avl_tree.h"
 
+/**
+ * /brief Test case for avl_tree.
+ * /sa avl_tree
+ */
 class AVLTreeTest : public ::testing::Test {
 };
 
