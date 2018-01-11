@@ -1,6 +1,9 @@
 #include "avl_tree.h"
 
-/* Constructor for a new node */
+/**
+ * \brief Creates new node.
+ * \param key Key of node
+ */
 avl_tree::node::node(int key)
 	: key(key) {}
 
@@ -20,7 +23,11 @@ void avl_tree::recursive_delete(typename avl_tree::node *nude) {
 	delete nude;
 }
 
-/* Searches a node in the tree */
+/**
+ * \brief Find node with given key in this tree,
+ * \param key Key of searched node
+ * \return Node with given key or nullptr if no matching node found
+ */
 const typename avl_tree::node *avl_tree::search(int key) {
 	return search(root, key);
 }
@@ -39,7 +46,12 @@ const typename avl_tree::node *avl_tree::search(typename avl_tree::node *nude, i
 	return nude;
 }
 
-/* Inserts a node in a tree */
+/**
+ * \brief Insert a new node into this tree.
+ * If a node with the given key already exists nothing happens.
+ * \param key Key of node
+ * \return if insertion was successful
+ */
 const bool avl_tree::insert(int key) {
 	if (this->root == nullptr) {
 	    this->root = new typename avl_tree::node(key);
@@ -75,7 +87,12 @@ const bool avl_tree::insert(typename avl_tree::node *nude, int key) {
 	return changed;
 }
 
-/* Deletes a node in the tree */
+/**
+ * \brief Remove node with given key from this tree.
+ * If no node with given key is found, nothing happens.
+ * \param key Key of node to be deleted
+ * \return if removal was successful
+ */
 const bool avl_tree::remove(int key) {
 	if (this->root == nullptr) {
 		return false;
